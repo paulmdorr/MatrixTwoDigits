@@ -75,3 +75,15 @@ void MatrixTwoDigits::slideText(String text, int delayTime) {
   }
   printChars(NULL, NULL);
 }
+
+void MatrixTwoDigits::printDots(byte dots) {
+  for (int i=0; i<dots ; i++) {
+    byte row = i / 8;
+    byte column = i - ((i / 8) * 8);
+    if (!vertical) {
+      lc.setLed(0, row, column, true);
+    } else {
+      lc.setLed(0, column, 7 - row, true);
+    }
+  }
+}

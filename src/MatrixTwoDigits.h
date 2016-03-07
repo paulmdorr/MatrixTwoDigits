@@ -56,4 +56,5 @@ class MatrixTwoDigits {
     void printNumber(int number);
     void printChars(char first, char second);
     void slideText(String text, int delayTime);
+    void printDots(byte dots);
 };
