@@ -45,8 +45,6 @@ class MatrixTwoDigits {
       (B00000000 * 256) + B00000000  //Space (index 26)
     };
 
-    //Harcoded declaration, so it doesn't explode, should I change this? :/
-    LedControl lc = LedControl(12, 11, 10, 0);
     bool vertical;
     void printNumberOnMatrix(int number, bool right);
     void printCharOnMatrix(char charToPrint, bool right);
@@ -57,4 +55,7 @@ class MatrixTwoDigits {
     void printChars(char first, char second);
     void slideText(String text, int delayTime);
     void printDots(byte dots);
+
+    //Harcoded declaration, so it doesn't explode, should I change this?
+    LedControl lc = LedControl(12, 11, 10, 0);
 };
