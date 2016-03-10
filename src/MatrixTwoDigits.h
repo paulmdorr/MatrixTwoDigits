@@ -50,12 +50,13 @@ class MatrixTwoDigits {
     void printCharOnMatrix(char charToPrint, bool right);
     void printOnMatrix(word* base, int position, bool right);
   public:
+    //Harcoded declaration, so it doesn't explode, should I change this?
+    LedControl lc = LedControl(12, 11, 10, 0);
+
     MatrixTwoDigits(int dataPin, int clkPin, int csPin, bool vertical);
     void printNumber(int number);
     void printChars(char first, char second);
     void slideText(String text, int delayTime);
     void printDots(byte dots);
-
-    //Harcoded declaration, so it doesn't explode, should I change this?
-    LedControl lc = LedControl(12, 11, 10, 0);
+    void printFromArray(byte drawing[8][8]);
 };

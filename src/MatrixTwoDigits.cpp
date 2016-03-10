@@ -87,3 +87,18 @@ void MatrixTwoDigits::printDots(byte dots) {
     }
   }
 }
+
+void MatrixTwoDigits::printFromArray(byte drawing[8][8]) {
+  lc.clearDisplay(0);
+  for (byte i=0; i<8; i++) {
+    for (byte j=0; j<8; j++) {
+      if (drawing[i][j] == 1) {
+        if (!vertical) {
+          lc.setLed(0, i, j, true);
+        } else {
+          lc.setLed(0, j, 7 - i, true);
+        }
+      }
+    }
+  }
+}
