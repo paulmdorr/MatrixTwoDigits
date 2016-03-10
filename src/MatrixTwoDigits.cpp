@@ -38,7 +38,7 @@ void MatrixTwoDigits::printOnMatrix(word* base, int position, bool right) {
 }
 
 void MatrixTwoDigits::printNumber(int number) {
-  if (number > 0 && number < 100) {
+  if (number >= 0 && number < 100) {
     lc.clearDisplay(0);
     if (number > 9) {
       int first = number / 10;
